@@ -3,157 +3,668 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
-<title>Mini Assignment 1 </title>
+<title>Major Project 2023 </title>
 <style title="Twine CSS">@keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes fade-in-out{0%,to{opacity:0}50%{opacity:1}}@keyframes rumble{25%{top:-0.1em}75%{top:.1em}0%,to{top:0px}}@keyframes shudder{25%{left:.1em}75%{left:-0.1em}0%,to{left:0px}}@keyframes buoy{25%{top:.25em}75%{top:-0.25em}0%,to{top:0px}}@keyframes sway{25%{left:.25em}75%{left:-0.25em}0%,to{left:0px}}@keyframes pulse{0%{transform:scale(0, 0)}20%{transform:scale(1.2, 1.2)}40%{transform:scale(0.9, 0.9)}60%{transform:scale(1.05, 1.05)}80%{transform:scale(0.925, 0.925)}to{transform:scale(1, 1)}}@keyframes zoom-in{0%{transform:scale(0, 0)}to{transform:scale(1, 1)}}@keyframes shudder-in{0%,to{transform:translateX(0em)}5%,25%,45%{transform:translateX(-1em)}15%,35%,55%{transform:translateX(1em)}65%{transform:translateX(-0.6em)}75%{transform:translateX(0.6em)}85%{transform:translateX(-0.2em)}95%{transform:translateX(0.2em)}}@keyframes rumble-in{0%,to{transform:translateY(0em)}5%,25%,45%{transform:translateY(-1em)}15%,35%,55%{transform:translateY(1em)}65%{transform:translateY(-0.6em)}75%{transform:translateY(0.6em)}85%{transform:translateY(-0.2em)}95%{transform:translateY(0.2em)}}@keyframes fidget{0%,8.1%,82.1%,31.1%,38.1%,44.1%,40.1%,47.1%,74.1%,16.1%,27.1%,72.1%,24.1%,95.1%,6.1%,36.1%,20.1%,4.1%,91.1%,14.1%,87.1%,to{left:0px;top:0px}8%,82%,31%,38%,44%{left:-1px}40%,47%,74%,16%,27%{left:1px}72%,24%,95%,6%,36%{top:-1px}20%,4%,91%,14%,87%{top:1px}}@keyframes slide-right{0%{transform:translateX(-100vw)}}@keyframes slide-left{0%{transform:translateX(100vw)}}@keyframes slide-up{0%{transform:translateY(100vh)}}@keyframes slide-down{0%{transform:translateY(-100vh)}}@keyframes fade-right{0%{opacity:0;transform:translateX(-1em)}to{opacity:1}}@keyframes fade-left{0%{opacity:0;transform:translateX(1em)}to{opacity:1}}@keyframes fade-up{0%{opacity:0;transform:translateY(1em)}to{opacity:1}}@keyframes fade-down{0%{opacity:0;transform:translateY(-1em)}to{opacity:1}}@keyframes flicker{0%,29%,31%,63%,65%,77%,79%,86%,88%,91%,93%{opacity:0}30%{opacity:.2}64%{opacity:.4}78%{opacity:.6}87%{opacity:.8}92%,to{opacity:1}}@keyframes blur{0%{filter:blur(2rem);opacity:0}25%{opacity:1}to{filter:blur(0rem);opacity:1}}.dom-debug-mode tw-story,.dom-debug-mode tw-passage,.dom-debug-mode tw-sidebar,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{outline:1px solid #f5a3da;min-height:32px;display:block !important}.dom-debug-mode tw-story::before,.dom-debug-mode tw-passage::before,.dom-debug-mode tw-sidebar::before,.dom-debug-mode tw-include::before,.dom-debug-mode tw-hook::before,.dom-debug-mode tw-expression::before,.dom-debug-mode tw-link::before,.dom-debug-mode tw-dialog::before,.dom-debug-mode tw-columns::before,.dom-debug-mode tw-column::before,.dom-debug-mode tw-align::before{position:absolute;top:0;left:0;height:16px;background-color:#f5a3da;color:#000;font-size:16px;font-weight:normal;font-style:normal;font-family:monospace;display:inline-block;line-height:100%;white-space:pre;z-index:999997}.dom-debug-mode tw-story:hover,.dom-debug-mode tw-passage:hover,.dom-debug-mode tw-sidebar:hover,.dom-debug-mode tw-include:hover,.dom-debug-mode tw-hook:hover,.dom-debug-mode tw-expression:hover,.dom-debug-mode tw-link:hover,.dom-debug-mode tw-dialog:hover,.dom-debug-mode tw-columns:hover,.dom-debug-mode tw-column:hover,.dom-debug-mode tw-align:hover{outline:1px solid #fc9}.dom-debug-mode tw-story:hover::before,.dom-debug-mode tw-passage:hover::before,.dom-debug-mode tw-sidebar:hover::before,.dom-debug-mode tw-include:hover::before,.dom-debug-mode tw-hook:hover::before,.dom-debug-mode tw-expression:hover::before,.dom-debug-mode tw-link:hover::before,.dom-debug-mode tw-dialog:hover::before,.dom-debug-mode tw-columns:hover::before,.dom-debug-mode tw-column:hover::before,.dom-debug-mode tw-align:hover::before{background-color:#fc9;transition:background-color 1s}.dom-debug-mode tw-passage,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{padding:1em;margin:0}.dom-debug-mode tw-story::before{content:'<tw-story tags="' attr(tags) '">'}.dom-debug-mode tw-passage::before{top:-16px;content:'<tw-passage tags="' attr(tags) '">'}.dom-debug-mode tw-sidebar::before{top:-16px;content:"<tw-sidebar>"}.dom-debug-mode tw-hook::before{content:'<tw-hook name="' attr(name) '">'}.dom-debug-mode tw-expression::before{content:'<tw-expression name="' attr(name) '">'}.dom-debug-mode tw-link::before{content:'<tw-link name="' attr(name) '">'}.dom-debug-mode tw-dialog::before{content:"<tw-dialog>"}.dom-debug-mode tw-columns::before{content:"<tw-columns>"}.dom-debug-mode tw-column::before{content:"<tw-column>"}.dom-debug-mode tw-align::before{content:"<tw-align>"}.dom-debug-mode tw-include::before{content:'<tw-include type="' attr(type) '" name="' attr(name) '">'}tw-open-button[goto]{display:none}.debug-mode tw-open-button[replay],.debug-mode tw-open-button[goto]{display:inline}.debug-mode tw-expression{display:inline-block !important}.debug-mode tw-expression[type=variable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"$" attr(name)}.debug-mode tw-expression[type=tempVariable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"_" attr(name)}.debug-mode tw-expression[return=boolean]{background-color:rgba(179,179,179,.2)}.debug-mode tw-expression[return=array]{background-color:rgba(255,102,102,.2)}.debug-mode tw-expression[return=dataset]{background-color:rgba(255,128,0,.2)}.debug-mode tw-expression[return=number]{background-color:rgba(255,179,102,.2)}.debug-mode tw-expression[return=datamap]{background-color:rgba(255,255,102,.2)}.debug-mode tw-expression[return=changer]{background-color:rgba(179,255,102,.2)}.debug-mode tw-expression[return=lambda]{background-color:rgba(102,255,102,.2)}.debug-mode tw-expression[return=hookname]{background-color:rgba(102,255,204,.2)}.debug-mode tw-expression[return=string]{background-color:rgba(102,255,255,.2)}.debug-mode tw-expression[return=datatype]{background-color:rgba(102,153,255,.2)}.debug-mode tw-expression[return=gradient],.debug-mode tw-expression[return=colour]{background-color:rgba(204,102,255,.2)}.debug-mode tw-expression[return=instant],.debug-mode tw-expression[return=macro]{background-color:rgba(240,117,199,.2)}.debug-mode tw-expression[return=command]{background-color:rgba(153,153,255,.2)}.debug-mode tw-expression.false{background-color:rgba(255,0,0,.2) !important}.debug-mode tw-expression[type=macro]::before{content:"(" attr(name) ":)";padding:0 .5rem;font-size:1rem;vertical-align:middle;line-height:normal;background-color:inherit;border:1px solid rgba(255,255,255,.5)}.debug-mode tw-expression[title]:not([title=""]){cursor:help}.debug-mode tw-hook{background-color:rgba(0,85,255,.1) !important}.debug-mode tw-hook::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"["}.debug-mode tw-hook::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]"}.debug-mode tw-hook[name]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]<" attr(name) "|"}.debug-mode tw-pseudo-hook{background-color:rgba(255,170,0,.1) !important}.debug-mode tw-collapsed::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"{"}.debug-mode tw-collapsed::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"}"}.debug-mode tw-verbatim::before,.debug-mode tw-verbatim::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"`"}.debug-mode tw-align[style*="text-align: center"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0) 0%, hsla(14deg, 100%, 87%, 0.25) 50%, hsla(14deg, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: left"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0.25) 0%, hsla(14deg, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: right"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0) 0%, hsla(14deg, 100%, 87%, 0.25) 100%)}.debug-mode tw-column{background-color:rgba(189,228,255,.2)}.debug-mode tw-enchantment{animation:enchantment .5s infinite;border:1px solid}.debug-mode tw-link::after,.debug-mode tw-broken-link::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(passage-name)}.debug-mode tw-include{background-color:rgba(204,128,51,.1)}.debug-mode tw-include::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(type) ' "' attr(name) '"'}.debug-dialogs tw-backdrop:not(.eval-replay):not(.harlowe-crash){pointer-events:none;opacity:.1}tw-eval-replay tw-eval-code,tw-eval-replay tw-eval-explanation{max-height:20vh;overflow:auto;margin:10px auto}tw-eval-replay tw-eval-code{display:block;font-family:monospace;padding-bottom:1ex;border-bottom:2px solid gray}tw-eval-replay tw-eval-explanation{display:block;text-align:center}tw-eval-replay tw-eval-explanation>code{white-space:pre-wrap}tw-eval-replay tw-eval-explanation>code.from-block{width:40%;display:inline-block;text-align:left;max-height:4em;overflow-wrap:anywhere;overflow-y:scroll}tw-eval-replay tw-eval-explanation>code.from-block~.to-desc{width:calc(40% - 2em);margin-left:2em;display:inline-block}tw-eval-replay tw-eval-explanation>code.from-block+span::after{content:"..."}tw-eval-replay tw-eval-explanation>code.from-inline{text-align:right}tw-eval-replay tw-eval-explanation>:nth-child(2){white-space:pre}tw-eval-replay tw-eval-explanation>.to-desc{text-align:left}tw-eval-replay tw-eval-explanation>table{width:100%;margin-top:1em}tw-eval-replay tw-eval-explanation>table td{white-space:pre-wrap !important;word-wrap:anywhere}tw-eval-replay tw-eval-reason{text-align:center;font-size:80%;font-style:italic;display:block}tw-eval-replay tw-eval-it{text-align:center;font-size:80%;display:block}tw-eval-replay tw-dialog-links{display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around}@keyframes enchantment{0%,to{border-color:#ffb366}50%{border-color:#6fc}}tw-debugger{position:fixed;box-sizing:border-box;bottom:0;right:0;z-index:999999;min-width:14em;min-height:1em;padding:0em .5em .5em 1em;font-size:1.25em;font-family:sans-serif;color:#262626;background-color:#fff;border-left:solid #262626 2px;border-top:solid #262626 2px;border-top-left-radius:.5em;opacity:1}tw-debugger.fade-panel:not(:hover){opacity:.33}tw-debugger.theme-dark{color:#d9d9d9;background-color:#000}tw-debugger.theme-dark{border-color:#d9d9d9 rgba(0,0,0,0) rgba(0,0,0,0) #d9d9d9}tw-debugger select{margin-right:1em;width:12em}tw-debugger button,tw-debugger tw-link{border-radius:3px;border:solid #999 1px;margin:auto 4px;color:#262626;background-color:#fff;cursor:pointer}tw-debugger button.enabled,tw-debugger tw-link.enabled{color:#000;background-color:#d9d9d9;box-shadow:inset #999 3px 5px .5em}tw-debugger.theme-dark button,tw-debugger.theme-dark tw-link{color:#d9d9d9;background-color:#000;border-color:#666}tw-debugger.theme-dark button.enabled,tw-debugger.theme-dark tw-link.enabled{color:#e6e6e6;background-color:#424242;box-shadow:inset #666 3px 5px .5em}tw-debugger button{font-size:1em;overflow-x:hidden;text-overflow:ellipsis;white-space:pre}tw-debugger tw-link{font-size:1.25em;border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}tw-debugger tw-link:hover{border-color:#262626;color:#262626}tw-debugger.theme-dark tw-link:hover{border-color:#d9d9d9;color:#d9d9d9}tw-debugger tw-dialog{background-color:#fff;color:#000;font-size:1.25em}tw-debugger.theme-dark tw-dialog{background-color:#000;color:#e6e6e6}tw-debugger .panel{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;position:absolute;bottom:100%;left:-2px;right:0;padding:1em;overflow-y:scroll;overflow-x:hidden;border:inherit;box-sizing:content-box;background-color:#fff;border-bottom:solid #999 2px;border-top-left-radius:.5em;border-bottom-left-radius:.5em;font-size:.8em}tw-debugger .panel:empty,tw-debugger .panel[hidden]{display:none}tw-debugger.theme-dark .panel{background-color:#000;border-bottom-color:#666}tw-debugger .panel-source .panel-row-buttons{width:2rem}tw-debugger .panel-source .source-tags{width:20%;font-style:italic}tw-debugger .panel-row-source td{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere;max-height:8rem;padding:1rem}tw-debugger .panel-rows{width:100%;overflow-x:scroll}tw-debugger .panel-rows>*{display:table-row}tw-debugger .panel-rows>div:nth-of-type(2n){background-color:#e6e6e6}tw-debugger .panel-tools .panel-rows>*,tw-debugger .panel-options .panel-rows>*{margin-top:.4rem;display:block}tw-debugger.theme-dark .panel-rows>div:nth-of-type(2n){background-color:#212121}tw-debugger .panel-row-buttons{text-align:right}tw-debugger .panel-variables .panel-rows:empty::before{content:"~ No variables ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-enchantments .panel-rows:empty::before{content:"~ No enchantments ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty::before{content:"~ No errors... for now. ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty+.panel-errors-bottom{display:none}tw-debugger.theme-dark .panel-variables .panel-rows:empty::before,tw-debugger.theme-dark .panel-enchantments .panel-rows:empty::before,tw-debugger.theme-dark .panel-errors .panel-rows:empty::before{color:#a8a8a8}tw-debugger .panel-rows:empty+.panel-variables-bottom{display:none}tw-debugger th[data-col]{text-decoration:underline;cursor:pointer}tw-debugger th[data-col][data-order=asc]::after{content:"↓"}tw-debugger th[data-col][data-order=desc]::after{content:"↑"}tw-debugger .panel-storylets:not(.panel-exclusive) .storylet-exclusive,tw-debugger .panel-storylets:not(.panel-urgent) .storylet-urgent{display:none}tw-debugger .storylet-exclusive,tw-debugger .storylet-urgent,tw-debugger .storylet-open{text-align:center}tw-debugger .panel-variables-bottom{padding-top:5px}tw-debugger .enchantment-row{min-height:1.5em}tw-debugger .variable-path{opacity:.4}tw-debugger .temporary-variable-scope,tw-debugger .enchantment-local{font-family:sans-serif;font-weight:normal;opacity:.8;font-size:.75em}tw-debugger .temporary-variable-scope:not(:empty)::before,tw-debugger .enchantment-local:not(:empty)::before{content:" in "}tw-debugger .variable-name,tw-debugger .enchantment-name{font-family:monospace;font-weight:bold}tw-debugger .variable-type{color:#575757;font-weight:normal;text-overflow:ellipsis;overflow:hidden;max-width:10em}tw-debugger.theme-dark .variable-type{color:#a8a8a8}tw-debugger .error-row{display:table-row;background-color:rgba(230,101,204,.3)}tw-debugger .error-row:nth-of-type(2n){background-color:rgba(237,145,219,.3)}tw-debugger .error-row>*{display:table-cell;padding:.25em .5em}tw-debugger .error-row .error-message[title]:not([title=""]){cursor:help}tw-debugger .error-row .error-passage{color:#575757}tw-debugger.theme-dark .error-row .error-passage{color:#a8a8a8}tw-debugger .storylet-row{background-color:rgba(193,240,225,.3)}tw-debugger .storylet-row:nth-child(2n){background-color:rgba(152,231,204,.3)}tw-debugger .storylet-row.storylet-closed{font-style:italic;background-color:#fff}tw-debugger .storylet-row.storylet-closed:nth-child(2n){background-color:#e6e6e6}tw-debugger .storylet-row.storylet-closed>:not(.storylet-lambda){opacity:.6}.storylet-error tw-debugger .storylet-row{background-color:rgba(230,101,204,.3)}.storylet-error tw-debugger .storylet-row:nth-child(2n){background-color:rgba(237,145,219,.3)}tw-debugger .storylet-row .storylet-name,tw-debugger .storylet-row .storylet-value{display:inline-block;width:50%}tw-debugger .storylet-row .storylet-lambda{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere}tw-debugger.theme-dark .storylet-row.storylet-closed{background-color:#000}tw-debugger.theme-dark .storylet-row.storylet-closed:nth-child(2n){background-color:#212121}tw-debugger .tabs{padding-bottom:.5em}tw-debugger .tab{border-radius:0px 0px .5em .5em;border-top:none;top:-2px}tw-debugger .resizer-h{position:absolute;height:14em;border-left:2px solid #999;border-right:2px solid #999;top:10px;left:4px;width:8px;cursor:ew-resize}tw-debugger.theme-dark .resizer-h{border-color:rgba(0,0,0,0) #666}tw-debugger .resizer-v{position:absolute;height:8px;border-top:2px solid #999;border-bottom:2px solid #999;margin-bottom:4px;top:4px;left:10px;width:95%;cursor:ns-resize;box-sizing:border-box}tw-debugger.theme-dark .resizer-v{border-color:#666 rgba(0,0,0,0)}tw-debugger mark{color:inherit;background-color:rgba(101,230,230,.3) !important}tw-dialog{z-index:999997;border:#fff solid 2px;padding:2em;color:#fff;background-color:#000;display:block}@media(min-width: 576px){tw-dialog{max-width:50vw}}tw-dialog input[type=text]{font-size:inherit;width:100%;border:solid #fff !important}tw-dialog-links{text-align:right;display:-ms-flexbox;display:flex;-ms-flex-pack:end;justify-content:flex-end}tw-backdrop{z-index:999996;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.8);display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}tw-backdrop~tw-backdrop{display:none}tw-link,.enchantment-link{cursor:pointer;color:#4169e1;font-weight:bold;text-decoration:none;transition:color .2s ease-in-out}tw-passage [style^=color] tw-link:not(:hover),tw-passage [style*=" color"] tw-link:not(:hover),tw-passage [style^=color][hover=true] tw-link:hover,tw-passage [style*=" color"][hover=true] tw-link:hover,tw-passage [style^=color] .enchantment-link:not(:hover),tw-passage [style*=" color"] .enchantment-link:not(:hover),tw-passage [style^=color][hover=true] .enchantment-link:hover,tw-passage [style*=" color"][hover=true] .enchantment-link:hover{color:inherit}tw-link:hover,.enchantment-link:hover{color:#00bfff}tw-link:active,.enchantment-link:active{color:#dd4b39}.visited{color:#6941e1}tw-passage [style^=color] .visited:not(:hover),tw-passage [style*=" color"] .visited:not(:hover),tw-passage [style^=color][hover=true] .visited:hover,tw-passage [style*=" color"][hover=true] .visited:hover{color:inherit}.visited:hover{color:#e3e}tw-broken-link{color:#933;border-bottom:2px solid #933;cursor:not-allowed}tw-passage [style^=color] tw-broken-link:not(:hover),tw-passage [style*=" color"] tw-broken-link:not(:hover),tw-passage [style^=color][hover=true] tw-broken-link:hover,tw-passage [style*=" color"][hover=true] tw-broken-link:hover{color:inherit}tw-link.enchantment-mouseover,.link.enchantment-mouseover,tw-expression.enchantment-mouseover>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border-bottom:2px dashed #999}tw-link.enchantment-mouseover:hover,tw-link.enchantment-mouseover:active,.link.enchantment-mouseover:hover,.link.enchantment-mouseover:active,tw-expression.enchantment-mouseover>tw-link:hover,tw-expression.enchantment-mouseover>tw-link:active{color:inherit}tw-link.enchantment-mouseover.enchantment-button,.link.enchantment-mouseover.enchantment-button,tw-expression.enchantment-mouseover>tw-link.enchantment-button{border-style:dashed}tw-link.enchantment-mouseout,.link.enchantment-mouseout,tw-expression.enchantment-mouseout>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border:rgba(64,149,191,.6) 1px solid;border-radius:.2em}tw-link.enchantment-mouseout:hover,tw-link.enchantment-mouseout:active,.link.enchantment-mouseout:hover,.link.enchantment-mouseout:active,tw-expression.enchantment-mouseout>tw-link:hover,tw-expression.enchantment-mouseout>tw-link:active{color:inherit}tw-link.enchantment-mouseout:hover,.link.enchantment-mouseout:hover,tw-expression.enchantment-mouseout>tw-link:hover{background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 1px solid}tw-link.enchantment-dblclick,.link.enchantment-dblclick,tw-expression.enchantment-dblclick>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;cursor:pointer;border:2px solid #999;border-radius:0}tw-link.enchantment-dblclick:hover,tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:hover,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:hover,tw-expression.enchantment-dblclick>tw-link:active{color:inherit}tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:active{background-color:#999}tw-link.enchantment-button,.link.enchantment-button,.enchantment-button:not(.link) tw-link,.enchantment-button:not(.link) .link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}.enchantment-button{display:block}.enchantment-clickblock{cursor:pointer;width:100%;height:100%;display:block}.enchantment-clickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;color:rgba(65,105,225,.5);transition:color .2s ease-in-out}.enchantment-clickblock>:not(tw-enchantment):hover::after{color:rgba(0,191,255,.5)}.enchantment-clickblock>:not(tw-enchantment):active::after{color:rgba(222,78,59,.5)}.enchantment-clickblock>:not(tw-enchantment)::after{box-shadow:inset 0 0 0 .5vmax}.enchantment-clickblock>tw-passage::after,.enchantment-clickblock>tw-sidebar::after{box-shadow:0 0 0 .5vmax}.enchantment-mouseoverblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:2px dashed #999}.enchantment-mouseoutblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:rgba(64,149,191,.6) 2px solid}.enchantment-mouseoutblock:hover>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 2px solid;border-radius:.2em}.enchantment-dblclickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;cursor:pointer;border:2px solid #999}tw-dialog-links{padding-top:1.5em}tw-dialog-links tw-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block;display:inline-block}html{margin:0;height:100%;overflow-x:hidden}*,:before,:after{position:relative;box-sizing:inherit}body{margin:0;height:100%}tw-storydata{display:none}tw-story{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;font:100% Georgia,serif;box-sizing:border-box;width:100%;min-height:100%;font-size:1.5em;line-height:1.5em;padding:5% 5%;overflow:hidden;background-color:#000;color:#fff}tw-story [style*=content-box] *{box-sizing:border-box}@media(min-width: 576px){tw-story{padding:5% 20%}}tw-story tw-consecutive-br{display:block;height:1.6ex;visibility:hidden}tw-story select{background-color:rgba(0,0,0,0);font:inherit;border-style:solid;padding:2px}tw-story select:not([disabled]){color:inherit}tw-story textarea{resize:none;background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none;padding:2px}tw-story input[type=text]{background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none}tw-story input[type=checkbox]{transform:scale(1.5);margin:0 .5em .5em .5em;vertical-align:middle}tw-story tw-noscript{animation:appear .8s}tw-passage{display:block}tw-sidebar{text-align:center;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between}@media(min-width: 576px){tw-sidebar{left:-5em;width:3em;position:absolute;-ms-flex-direction:column;flex-direction:column}tw-enchantment[style*=width]>tw-sidebar{width:inherit}}tw-icon{display:inline-block;margin:.5em 0;font-size:66px;font-family:"Verdana",sans-serif}tw-icon[alt]{opacity:.2;cursor:pointer}tw-icon[alt]:hover{opacity:.4}tw-icon[data-label]::after{font-weight:bold;content:attr(data-label);font-size:20px;bottom:-20px;left:-50%;white-space:nowrap}tw-meter{display:block}tw-hook:empty,tw-expression:empty{display:none}tw-error{display:inline-block;border-radius:.2em;padding:.2em;font-size:1rem;cursor:help;white-space:pre-wrap}tw-error.error{background-color:rgba(223,58,190,.6);color:#fff}tw-error.warning{background-color:rgba(223,140,58,.6);color:#fff;display:none}.debug-mode tw-error.warning{display:inline}tw-error-explanation{display:block;font-size:.8rem;line-height:1rem}tw-open-button,tw-folddown{cursor:pointer;line-height:0em;border-radius:4px;border:1px solid rgba(255,255,255,.5);font-size:.8rem;margin:0 .2rem;padding:3px;white-space:pre}tw-folddown::after{content:"▶"}tw-folddown.open::after{content:"▼"}tw-open-button[replay]{display:none}tw-error tw-open-button,tw-eval-replay tw-open-button{display:inline !important}tw-open-button::after{content:attr(label)}tw-notifier{border-radius:.2em;padding:.2em;font-size:1rem;background-color:rgba(223,182,58,.4);display:none}.debug-mode tw-notifier{display:inline}tw-notifier::before{content:attr(message)}tw-colour{border:1px solid #000;display:inline-block;width:1em;height:1em}tw-enchantment:empty{display:none}h1{font-size:3em}h2{font-size:2.25em}h3{font-size:1.75em}h1,h2,h3,h4,h5,h6{line-height:1em;margin:.3em 0 .6em 0}pre{font-size:1rem;line-height:initial}small{font-size:70%}big{font-size:120%}mark{color:rgba(0,0,0,.6);background-color:#ff9}ins{color:rgba(0,0,0,.6);background-color:rgba(255,242,204,.5);border-radius:.5em;box-shadow:0em 0em .2em #ffe699;text-decoration:none}center{text-align:center;margin:0 auto;width:60%}blink{text-decoration:none;animation:fade-in-out 1s steps(1, end) infinite alternate}tw-align{display:block}tw-columns{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between}.transition-in{animation:appear 0ms step-start}.transition-out{animation:appear 0ms step-end}[data-t8n^=dissolve].transition-in,[data-t8n=fade].transition-in{animation:appear .8s}[data-t8n^=dissolve].transition-out,[data-t8n=fade].transition-out{animation:appear .8s reverse}[data-t8n^=shudder].transition-in{display:inline-block !important;animation:shudder-in .8s}[data-t8n^=shudder].transition-out{display:inline-block !important;animation:shudder-in .8s reverse}[data-t8n^=rumble].transition-in{display:inline-block !important;animation:rumble-in .8s}[data-t8n^=rumble].transition-out{display:inline-block !important;animation:rumble-in .8s reverse}[data-t8n^=pulse].transition-in{animation:pulse .8s;display:inline-block !important}[data-t8n^=pulse].transition-out{animation:pulse .8s reverse;display:inline-block !important}[data-t8n^=zoom].transition-in{animation:zoom-in .8s;display:inline-block !important}[data-t8n^=zoom].transition-out{animation:zoom-in .8s reverse;display:inline-block !important}[data-t8n^=blur].transition-in{animation:blur .8s;display:inline-block !important}[data-t8n^=blur].transition-out{animation:blur .8s reverse;display:inline-block !important}[data-t8n^=slideleft].transition-in{animation:slide-left .8s;display:inline-block !important}[data-t8n^=slideleft].transition-out{animation:slide-right .8s reverse;display:inline-block !important}[data-t8n^=slideright].transition-in{animation:slide-right .8s;display:inline-block !important}[data-t8n^=slideright].transition-out{animation:slide-left .8s reverse;display:inline-block !important}[data-t8n^=slideup].transition-in{animation:slide-up .8s;display:inline-block !important}[data-t8n^=slideup].transition-out{animation:slide-down .8s reverse;display:inline-block !important}[data-t8n^=slidedown].transition-in{animation:slide-down .8s;display:inline-block !important}[data-t8n^=slidedown].transition-out{animation:slide-up .8s reverse;display:inline-block !important}[data-t8n^=fadeleft].transition-in{animation:fade-left .8s;display:inline-block !important}[data-t8n^=fadeleft].transition-out{animation:fade-right .8s reverse;display:inline-block !important}[data-t8n^=faderight].transition-in{animation:fade-right .8s;display:inline-block !important}[data-t8n^=faderight].transition-out{animation:fade-left .8s reverse;display:inline-block !important}[data-t8n^=fadeup].transition-in{animation:fade-up .8s;display:inline-block !important}[data-t8n^=fadeup].transition-out{animation:fade-down .8s reverse;display:inline-block !important}[data-t8n^=fadedown].transition-in{animation:fade-down .8s;display:inline-block !important}[data-t8n^=fadedown].transition-out{animation:fade-up .8s reverse;display:inline-block !important}[data-t8n^=flicker].transition-in{animation:flicker .8s}[data-t8n^=flicker].transition-out{animation:flicker .8s reverse}
 </style>
 </head>
 <body>
-<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Mini Assignment 1 .</tw-noscript></noscript></tw-story>
-<tw-storydata name="Mini Assignment 1 " startnode="1" creator="Twine" creator-version="2.7.1" format="Harlowe" format-version="3.3.7" ifid="00B111DA-1A72-4C5E-9C87-59ABAAB05023" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start " tags="" position="575,225" size="100,100">Hello there! You have woken up in a grass field. The sun is shining down on you, and your head hurts. When trying to rack your brain for an explanation, you realize that you have (text-style:&quot;italic&quot;)[no memory] of who you are or where you are! Oh no! you decide to walk into the forest, and you stumble upon three different dirt roads… 
+<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Major Project 2023 .</tw-noscript></noscript></tw-story>
+<tw-storydata name="Major Project 2023 " startnode="1" creator="Twine" creator-version="2.7.1" format="Harlowe" format-version="3.3.7" ifid="1BDA6370-672D-426B-8AB2-302EC7CCD9DA" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start " tags="" position="375,125" size="100,100">Welcome! 
 
-Do you the take road that…
+(after:2s)[Would you like to go on a time traveling adventure? I warn you; you must be brave! If you are ready for the challenge, let’s find out if you would survive during the Reformation period of Tudor England during the year 1533.  
+]
 
-(text-colour:#bac8ff)[[Has flowers along it]]
-(text-colour:#bac8ff)[[Looks to lead to a bustling city]]
-(text-colour:#bac8ff)[[Is covered in the darkness of thick trees]] 
 
-&lt;a title=&quot;cassi saari, CC BY-SA 4.0 &amp;lt;https://creativecommons.org/licenses/by-sa/4.0&amp;gt;, via Wikimedia Commons&quot; href=&quot;https://commons.wikimedia.org/wiki/File:Nachusa_Grasslands_Spring_2016.jpg&quot;&gt;&lt;img width=&quot;512&quot; alt=&quot;Nachusa Grasslands Spring 2016&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Nachusa_Grasslands_Spring_2016.jpg/512px-Nachusa_Grasslands_Spring_2016.jpg&quot;&gt;&lt;/a&gt;</tw-passagedata><tw-passagedata pid="2" name="Has flowers along it" tags="" position="575,350" size="100,100">You chose the road with the flowers along it! As you walk along the path you cross little homes and farms, when you ask what the year is, a farmer tells you that it’s Spring of 1540! 
+(after:6s)[Please read the (text-colour:#ffc078)[[instructions]] carefully as your life depends on it]
+</tw-passagedata><tw-passagedata pid="2" name="instructions" tags="" position="550,125" size="100,100">You are going to be taken through a time traveling journey, your goal is to figure out your identity before anyone suspects you don’t know who you are.  
 
-You thank the farmer and continue along the path until you reach a stone church that is surrounded by tall trees. 
 
-Do you… 
+(after:3s)[You must hide while you search for clues within the surroundings you encounter, you will be given different choices that will shape your character into life through each stage.  ]
 
-(text-colour:#bac8ff)[[Enter the church]]
-(text-colour:#bac8ff)[[Walk around to look through the window]]
 
-</tw-passagedata><tw-passagedata pid="3" name="Looks to lead to a bustling city" tags="" position="700,100" size="100,100">You took the road to the city, and you were stopped by thieves along the way! They took your clothes, and(text-colour:#f03e3e)[ they left you for dead!]
+(after:6s)[There are many obstacles (text-colour:#f03e3e)[(Including death)] throughout your path, you must make use of the information given to you and a history book you will have in hand to guide you through the best chance of survival!  ]
 
-What a sad way to go out… 
-</tw-passagedata><tw-passagedata pid="4" name="Is covered in the darkness of thick trees" tags="" position="450,100" size="100,100">You took the dark road and got lost in the (text-colour:#fa5252)[scary forest!]
+ (after:10s)[(text-colour:#ffc078)[[Lets begin!]]]</tw-passagedata><tw-passagedata pid="3" name="Lets begin!" tags="" position="700,125" size="100,100">You have arrived in the year 1520 at Hampton Court, you find yourself in the kitchen of the palace and hear two cooks whispering rumors about Henry VIII growing sour with his marriage to Queen Catherine of Aragon and noticing his affections to a younger woman named Anne Boleyn. 
 
-You got cold in the middle of the night and started a fire, the light made the animals find you and you were eaten… 
 
-Why on earth would you choose that road? 
-</tw-passagedata><tw-passagedata pid="5" name="Enter the church" tags="" position="750,350" size="100,100">You enter the church and immediately spot a priest trying to fix a wooded pew that looks to be broken. When he notices you, he beckons you over to him. The priest explains that he doesn’t know how to fix the pew and he asks if you would be able to help him. 
+You (text-colour:#ffc078)[[open your book]] as you don’t know who these people are! </tw-passagedata><tw-passagedata pid="4" name="open your book" tags="" position="850,125" size="100,100">Henry VIII- He was the King of England from 1509-1547, was the leader of the English Reformation and established the Church of England 
 
-Do you… 
+(after:4s)[Catherine of Aragon– Daughter of Ferdinand of Aragon and Isabella of Castile of Spain. First wife of Henry VIII (and widow of his brother Arthur) whom she married in June 1509 solidifying the alliance of England with Spain. Highly devoted Catholic. ]
 
-(text-colour:#bac8ff)[[Help him]]
-(text-colour:#bac8ff)[[Decline and leave]]
-</tw-passagedata><tw-passagedata pid="6" name="Walk around to look through the window" tags="" position="425,350" size="100,100">You walk around the church to look through the many windows of the church. A priest spots you and yells at you to (text-colour:#fa5252)[“stay put!” ]
+(after:8s)[Anne Boleyn- Daughter of Sir Thomas Boleyn, a diplomat and courtier. She was especially interested in the new ideas of religious reform wafting in from Europe.  
+]
+(after:12s)[You continue walking through the castle and find yourself listening through a (text-colour:#ffc078)[[door…]] ]</tw-passagedata><tw-passagedata pid="5" name="door…" tags="" position="850,250" size="100,100">“Henry VIII requested the Catholic Church to annul his marriage from Catherine of Aragon to which Pope Clement VII refused. 
 
+(after:3s)[This will lead him on a conquest to lead him not only to a new wife, but to sever his realm and people from their alliance to the Roman Catholic Church. The break with Rome would, in turn, lead to a reformation in religion and a revolution in the relationship of those people to the Tudor state” ]
 
-The priest has you arressted and you spend your life in prison... 
 
+(after:8s)[You realize that you need to find out which side you are on… ]
 
-all for sneaking?</tw-passagedata><tw-passagedata pid="7" name="Help him" tags="" position="950,300" size="100,100">You agree to help the priest on the condition that he will answer any questions that you have. The priest agrees to it, and you get to work on fixing the pew. 
 
-When you have fixed the pew, the priest tells you that you are standing in a Catholic church in time of the Tudors! 
+(after:10s)[You find a sign at the end of the hall and has this (text-colour:#ffc078) [[information]] ]
 
-He informs you that the King, Henry VIII has gone //mad in the mind!// The priest, because you helped him, offers you a place to live on the condition that you become a priest. 
+</tw-passagedata><tw-passagedata pid="6" name="information" tags="" position="850,375" size="100,100">(text-colour:#f03e3e)[&#39;&#39;Catholic &#39;&#39;]
 
-Do you… 
+Source of divine truth- Scripture + tradition +authority 
 
-(text-colour:#bac8ff)[[Agree]]
-(text-colour:#bac8ff)[[Decline]]
+Structure- Hierarchical 
 
-&lt;a title=&quot;Joos van Cleve
-, Public domain, via Wikimedia Commons&quot; href=&quot;https://commons.wikimedia.org/wiki/File:1491_Henry_VIII.jpg&quot;&gt;&lt;img width=&quot;256&quot; alt=&quot;1491 Henry VIII&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/1491_Henry_VIII.jpg/256px-1491_Henry_VIII.jpg&quot;&gt;&lt;/a&gt;</tw-passagedata><tw-passagedata pid="8" name="Decline and leave" tags="" position="725,500" size="100,100">Whoops!! you realize that you have nowehere to go. You walk back to the church but trip on a rock and fall down a hill... 
+Clergy- Semi-sacred priest 
 
-you die... 
+Ritual- Sacramental and efficacious 
 
-(text-colour:#f03e3e)[try being a little more nice! ]</tw-passagedata><tw-passagedata pid="9" name="Agree" tags="" position="1100,300" size="100,100">You agree and become a priest! You have found a home and have made many new friends since being at the church. You have learned how to fix things, how to make bread, and how to spread the word of the lord! 
+Salvation- Faith + good works (free will) 
 
-For doing do so well and for being so kind…
+ 
 
-Skip forward to…
+(text-colour:#f03e3e)[&#39;&#39;Protestant &#39;&#39;]
 
-(text-colour:#bac8ff)[[July of 1540!]]
+ 
 
-</tw-passagedata><tw-passagedata pid="10" name="Decline" tags="" position="950,450" size="100,100">You still have nowhere to live. 
+Source of divine truth- Scripture Alone 
 
-You spend the night in the woods and get //eaten// by wolves. 
+Structure- Limited or no hierarchy 
 
-Why would you do that? 
+Clergy- Minister 
 
-The priest was being kind to you
+Ritual- Few sacraments; symbolic 
 
-Please learn how to be nicer! 
+Salvation- Faith alone (some predestinarian) 
 
-Well, you can’t now. (text-colour:#f03e3e)[You died… ]
+ 
 
-</tw-passagedata><tw-passagedata pid="11" name="July of 1540!" tags="" position="1250,450" size="100,100">The days are //hot//, and the King has become more crazed as time has gone on! 
+On each side you have 2 doors, a Wooden Door to your right and a Metal Door to your left.  
 
-The priest that took you in takes you on a trip to London so that you can see the grand churches of the city! When you get there, you notice the stink of the city and the scared looks that the common folk are giving you. 
+ 
 
-The priest asks if you would like to visit the grandest church in London, St. Etheldreda&#39;s Church!
+(text-colour:#ffc078)[[Continue]] </tw-passagedata><tw-passagedata pid="7" name="Continue" tags="" position="850,500" size="100,100">You must pick a door //fast//! 
+ 
 
-What option sounds best?
+(text-colour:#ffc078)[[Catholic]] Wooden Door will lead you through the Roman Catholic Church  
 
-(text-colour:#bac8ff)[[Agree to go]] 
-(text-colour:#bac8ff)[[Decline his offer]]
+(text-colour:#ffc078)[[Protestant]] Metal Door will lead you through the Reformation Period of Henry VIII  </tw-passagedata><tw-passagedata pid="8" name="Catholic" tags="" position="850,650" size="100,100">In 1529 Roman Catholicism was the official religion of the English state. This meant //two// things, First the Church was ever present in the life of the kingdom, and its people. It supplied them with their explanation of the universe and of their own trials and tribulations. 
 
-&lt;a title=&quot;Perferens, CC BY-SA 3.0 &amp;lt;https://creativecommons.org/licenses/by-sa/3.0&amp;gt;, via Wikimedia Commons&quot; href=&quot;https://commons.wikimedia.org/wiki/File:Church_of_St_Etheldreda_in_Ely,_Cambridgeshire,_UK.JPG&quot;&gt;&lt;img width=&quot;512&quot; alt=&quot;Church of St Etheldreda in Ely, Cambridgeshire, UK&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Church_of_St_Etheldreda_in_Ely%2C_Cambridgeshire%2C_UK.JPG/512px-Church_of_St_Etheldreda_in_Ely%2C_Cambridgeshire%2C_UK.JPG&quot;&gt;&lt;/a&gt;</tw-passagedata><tw-passagedata pid="12" name="Agree to go" tags="" position="1425,450" size="100,100">You agree and follow the priest to the grand church. The church is large, and the windows are taller than you have ever seen before. The chuch is truly a site to look at. It is far more grand than the church back at home!
+(after:4s)[It marked stages of the lives in baptism, marriage, and burial. Church-affiliated guilds regulated the economic life of towns. Monasteries. Convents, and Church-run hospitals distributed charity. ]
 
-The priest introduces you to a friend of his. But the friend does not look happy to see you both… (text-colour:#f03e3e)[he looks scared! ]
+(after:10s)[The Church owned nearly a quarter of the land in England which meant that for many peasants and workers it was not only their chief source of spiritual wisdom and comfort, but also their landlord, employer, and neighbor. Finally, their //garish// priest was their primary source of news about the world beyond their villages and towns. (Rosman,11) ]
 
-(text-colour:#bac8ff)[[Ask him why]]
 
-&lt;a title=&quot;Diliff, CC BY-SA 3.0 &amp;lt;https://creativecommons.org/licenses/by-sa/3.0&amp;gt;, via Wikimedia Commons&quot; href=&quot;https://commons.wikimedia.org/wiki/File:St_Etheldreda%27s_Church_2,_London,_UK_-_Diliff.jpg&quot;&gt;&lt;img width=&quot;512&quot; alt=&quot;St Etheldreda&amp;#039;s Church 2, London, UK - Diliff&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/St_Etheldreda%27s_Church_2%2C_London%2C_UK_-_Diliff.jpg/512px-St_Etheldreda%27s_Church_2%2C_London%2C_UK_-_Diliff.jpg&quot;&gt;&lt;/a&gt;
-</tw-passagedata><tw-passagedata pid="13" name="Decline his offer" tags="" position="1100,450" size="100,100">Since you declined, the priest was //very upset//, and so, he left you in the middle of the city… all by yourself! 
 
-You soon realize that you have no clue where you are! By looking through the different stores, you are able to buy a map with a couple of coins that your freind gifted you before you left for the city. 
+ 
+(after:13s)[Which hierarchy do you think// you //are part of?  ]
 
-With the map, you are able to (text-colour:#bac8ff)[[find your way back to your friend! |July of 1540!]] Try being neicer and things like that won&#39;t happen!! Next time, you should go with him! It could be really fun!
+(after:15s)[(text-colour:#ffc078)[[Monarchy and Court]]
 
-&lt;a title=&quot;Georg Braun; Frans Hogenberg, Public domain, via Wikimedia Commons&quot; href=&quot;https://commons.wikimedia.org/wiki/File:Braun_London_UBHD.jpg&quot;&gt;&lt;img width=&quot;512&quot; alt=&quot;Braun London UBHD&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Braun_London_UBHD.jpg/512px-Braun_London_UBHD.jpg&quot;&gt;&lt;/a&gt;</tw-passagedata><tw-passagedata pid="14" name="Ask him why" tags="" position="1425,600" size="100,100">The priest of the grand church explains that the king has gone mad… even madder! He tells you that the king has killed the most trusted Thomas Cromwell and is now questioning Catholic priests because of their loyalty to the Pope! 
+(text-colour:#ffc078)[[Roman Catholic Church]]
 
-(text-colour:#f03e3e)[//You//] are a Catholic priest now… oh no 
+(text-colour:#ffc078)[[Citizen]]]</tw-passagedata><tw-passagedata pid="9" name="Protestant" tags="" position="1050,550" size="100,100">Sometime in the mid-1520s King Henry VIII Great Matter has often been portrayed as one of those moments in history when a major turning point, affecting the lives of millions of people, hinged on the obsessions of a single man. But, in fact, it was all far more complicated than that.  
 
-Do you… 
+(after:5s)[Henry VIII and Catherine of Aragon seemed to have a happy marriage: he liked to style himself her champion and she was loyal and popular, earning praise for her government of the realm when he left it on the French campaign of 1513. Rather his dissatisfaction centered around her tragic obstetrical history, specifically her failure to give birth to a male heir. ]
 
-(text-colour:#bac8ff)[[Ask what to do]] 
-(text-colour:#bac8ff)[[Tell you friend that you two should leave]]
-</tw-passagedata><tw-passagedata pid="15" name="Ask what to do" tags="" position="1275,600" size="100,100">The priest of the grand church states that there is nothing to be done and that all three of your fates are in the hands of God… </tw-passagedata><tw-passagedata pid="16" name="Tell you friend that you two should leave" tags="" position="1600,600" size="100,100">You tell him that you think it would be better to go back home where it is safe, though, before he is able to say anything, the doors of the church are thrown open and several guards of the King come rushing in…
+(after:11s)[Only when we grasp the fact that Henry had weightier things on his mind than the demands of the royal libido can we understand the role of Anne Boleyn in the break with Rome: she was the catalyst, not the cause. ]
 
-They take the priest of the grand church… 
+(after:16s)[“What he needed was not a mistress but a new queen, a legal consort, young enough and strong enough to bear him a legitimate male heir. Thus, irrespective of Henry’s or Anne’s amorous inclinations, to achieve his goal, he needed a divorce” (Bucholz &amp; Key 65)  ]
 
-Your friend that took you in… 
+(after:21s)[(text-colour:#ffc078)[[Begin]] ]</tw-passagedata><tw-passagedata pid="10" name="Monarchy and Court" tags="" position="700,800" size="100,100">You find yourself in Rome, inside a Church, hiding behind a confession booth when someone begins to tell you that Queen Catherine of Aragon who is highly devoted to the Catholic faith, //refused// to accept Henry’s terms: a divorce, a pension, and the title princess dowager. 
 
-(text-colour:#bac8ff)[[And you…]]
-</tw-passagedata><tw-passagedata pid="17" name="And you…" tags="" position="1600,750" size="100,100">You are standing on a very tall wooden platform, the bag that was placed over your head has been taken off and you can now see the crowd of people that are standing in the streets… watching you. 
+(after:6s)[The queen appeared in trial in May 1529 and in her finest hour, demanded to be heard. First, she questioned the right of the court to examine her marriage. She was a royal person and so, she argued, above the law. (That is, if the law is the king’s, how could the law judge a royal person?)]
 
-The guard tells you, very loudly, that you are being hung for the crimes of being loyal to a corrupt Pope of the Catholic church. He states that it is by order the King Henry VIII. 
+(after:11s)[Then she denied that she and Arthur had ever had sexual relations. Thus, her first marriage had //never// been consummated. Many supported and advised the queen, Pope Clement VII refused to annul the marriage, Spanish diplomats at court, Bishops and Lord High Chancellor of Great Britain. ] 
 
-He asks if you have any last words
+(after:18s)[As you investigate the church in search for more clues someone (text-colour:#f03e3e)[[screams]]]</tw-passagedata><tw-passagedata pid="11" name="Roman Catholic Church" tags="" position="1000,875" size="100,100">You find yourself in Rome, inside the Vatican. As you begin to walk through the church and hear someone demand a quick meeting as they just received important news. You quickly hide behind the pipe organ in hopes they do not see you and as you hear closely… 
 
-Do you… 
 
-(text-colour:#bac8ff)[[Say that you’re not even Catholic]]
-(text-colour:#bac8ff)[[Say that you’re not a priest and that your friend kidnapped you]]
-(text-colour:#bac8ff)[[Say nothing and stay loyal to your friend]]
-</tw-passagedata><tw-passagedata pid="18" name="Say that you’re not even Catholic" tags="" position="1400,825" size="100,100">Your friend looks at you with hurt, and the people in the crowd boo and call you a coward for lying.
+“Henry VIII is the only supreme head in earth of the //Church of England//” 
 
-(text-colour:#f03e3e)[You are hung while people boo at you… ]
 
-</tw-passagedata><tw-passagedata pid="19" name="Say that you’re not a priest and that your friend kidnapped you" tags="" position="1825,825" size="100,100">Your friend, that one that //gave you a home// and a purpose in your forgetful life, //(text-colour:#f03e3e)[spits] //at your shoes and calls you a lying coward… 
+You must gather more information about The Roman (text-colour:#ffc078)[[Catholic Church]]</tw-passagedata><tw-passagedata pid="12" name="Citizen" tags="" position="525,675" size="100,100">All citizens were required to attend their parish churches on Sundays and holy days.  
 
-You have no friends now...
 
-And spit on your shoe...
+The religious culture of England is undergoing //radical change//. There has only been one universal or “Catholic”, church in Western Europe, headed by the pope in Rome. However, since England declared its independence of Rome; the English church was brought increasingly under state control and the king assumed its early headship.  
 
-You were hung regardless... 
-</tw-passagedata><tw-passagedata pid="20" name="Say nothing and stay loyal to your friend" tags="" position="1600,1000" size="100,100">You choose to say nothing, and instead, you give your friend a nod and a small, sad smile. 
 
-You were still hung…
+Monasteries, Chantries and religious guilds were dissolved, and much of the wealth of the church was confiscated by the government (Rosman, 18) 
 
-Though…
 
-No one booed at you, called you a coward, and you stayed a loyal friend in the end… 
+(text-colour:#ffc078)[[Continue...]]</tw-passagedata><tw-passagedata pid="13" name="screams" tags="" position="700,1000" size="100,100">“Henry VIII has just pronounced himself Supreme Head of the Church of England and has claimed //much// of its wealth. 
 
-You lived a good, loyal, short life.
+(after:4s)[The separation of the church will bring political and religious turbulence in Western and Central Europe in the following years, you must hurry to find out who you are!] 
 
-</tw-passagedata></tw-storydata>
+(after:8s)[What role within the Monarchy and Court do you think //you// are? ]
+
+(after:13s)[(text-colour:#ffc078)[[Monarch]]
+
+(text-colour:#ffc078)[[Gentleman]] 
+
+(text-colour:#ffc078)[[Chancellor]]]</tw-passagedata><tw-passagedata pid="14" name="Monarch" tags="" position="650,1150" size="100,100">So far, we know you feel as you are a Catholic Monarch. 
+
+So, what year would you choose? 
+
+(text-colour:#ffc078)[[1509]]
+
+(text-colour:#ffc078)[[1533]]
+
+ </tw-passagedata><tw-passagedata pid="15" name="Gentleman" tags="" position="850,1150" size="100,100">You are Thomas Howard, 3rd Duke of Norfolk! 
+
+(after:2s)[Congratulations! You made it out //alive//.]  
+
+(after:4s)[Thomas Howard, 3rd Duke of Norfolk, was born in 1473 in England, into the powerful Howard family. His father, John Howard, was the 1st Duke of Norfolk. Thomas Howard inherited the dukedom upon his father&#39;s death in 1485.During the reign of King Henry VII, Thomas Howard was a loyal supporter of the Tudor dynasty. He fought in the Battle of Bosworth Field in 1485, where Henry VII emerged victorious, and this loyalty earned him favor at the Tudor court. 
+]
+(after:10s)[Thomas Howard&#39;s prominence continued during the reign of Henry VIII. He played a crucial role in various military campaigns and diplomatic missions. He was appointed Lord Admiral of England in 1513 and led English forces to victory in the Battle of Flodden against the Scots. However, Thomas Howard&#39;s life took a dramatic turn when he became entangled in the tumultuous politics of Henry VIII&#39;s court. He was a staunch Catholic and opposed the king&#39;s divorce from Catherine of Aragon and his subsequent break from the Roman Catholic Church. This disagreement led to his temporary fall from favor. ]
+
+(after:13s)[Click (text-colour:#ffc078)[[here]] to learn more about what happened...]</tw-passagedata><tw-passagedata pid="16" name="Chancellor" tags="" position="475,1150" size="100,100">You are Sir Thomas More! 
+
+(after:2s)[You //lost//! You did //not// make it out alive.  ]
+
+(after:4s)[Thomas More was born 6 February 1477 or 1478 in Milk Street, Cheapside, London, the eldest of three sons as second of seven children of Sir John More and Agnes Graunger. renowned for his roles as an English lawyer, philosopher, and statesman. ]
+
+(after:9s)[His life is characterized by intellectual brilliance, unwavering principles, and a tragic fate.More received a stellar education, mastering Latin and Greek at St. Anthony&#39;s School. He continued his studies in classics, law, and theology at prestigious institutions such as Oxford University and Lincoln&#39;s Inn, where he honed his legal expertise and scholarly pursuits.  ]
+
+(after:15s)[Besides his legal career, More developed a deep interest in humanism and philosophy, forging friendships with notable humanists like Erasmus of Rotterdam. He ventured into politics and secured a seat in Parliament in 1504, advocating for reforms and championing his humanist ideals. More was a devout and staunchly loyal (text-colour:#ffc078)[[Catholic...]] ]</tw-passagedata><tw-passagedata pid="17" name="1509" tags="" position="550,1300" size="100,100">You are Catherine of Aragon!  
+
+(after:2s)[You made it out //alive//, Congratulations! ]
+
+(after:4s)[She was a queen of England born in Spain in 1485. She married Henry VIII, the king of England, in 1509. Catherine was known for her strong character and her devotion to the Catholic Church. She had a daughter, Mary, but her inability to provide a male heir to the throne caused marital problems with Henry. ]
+
+(after:9s)[Henry VIII sought an annulment of their marriage from the Pope, but it was //denied//. This led to a major religious and political //crisis// in England, known as the English Reformation. Henry decided to break away from the Catholic Church and created the Church of England, with himself as the head. This allowed him to annul his marriage to Catherine and marry Anne Boleyn. 
+
+(text-colour:#ffc078)[[Learn more about your fate!]]]
+</tw-passagedata><tw-passagedata pid="18" name="1533" tags="" position="725,1300" size="100,100">You are Queen Mary I!  
+
+(after:2s)[You made it out //alive//, Congratulations! ]
+
+(after:4s)[Known as &quot;Bloody Mary,&quot; was born on February 18, 1516, in London, England. Her parents were King Henry VIII and Catherine of Aragon. Her childhood was difficult because her father separated from the Catholic Church. 
+]
+(after:8s)[She was raised as a strong //Catholic// by her mother. When her younger half-brother, King Edward VI, ruled and promoted Protestantism, it was challenging for Mary. But when she became queen in 1553, she aimed to bring back Catholicism and (text-colour:#ffc078)[[reverse the Protestant changes.]]
+]
+
+
+</tw-passagedata><tw-passagedata pid="19" name="here" tags="" position="875,1300" size="100,100">In 1536, Thomas Howard was implicated in the fall of his niece, Anne Boleyn, who was executed for alleged adultery and treason. Although he managed to avoid a similar fate, he faced periods of imprisonment and house arrest.With the ascension of Queen Mary I to the throne in 1553, Thomas Howard&#39;s fortunes were restored. He was appointed as the Lord High Treasurer and played a role in the restoration of Catholicism in England. 
+
+
+(after:8s)[Thomas Howard, 3rd Duke of Norfolk, died on August 25, 1554. His life was a reflection of the complex and shifting political and religious landscape of the Tudor era. His loyalty to the crown, military achievements, and religious convictions left an indelible mark on English history, making him a notable figure in the annals of the British nobility. 
+]
+
+(after:10s)[(text-colour:#ffc078)[[Play again!|Continue]]
+
+Or 
+
+(text-colour:#ffc078)[[Choose another option|screams]]]</tw-passagedata><tw-passagedata pid="20" name="Catholic Church" tags="" position="1075,1050" size="100,100">You open your book for reference… 
+
+(after:2s)[“When Jesus died on a cross, he was standing in for his kin; his death was offered to God as redress for the offence caused by disobedience of the rest of humankind (Bossy 198:3-6) ]
+
+(after:5s)[Congregations watched as priests raised wafer bread and wine aloft: these were symbols of broken body and spilt blood of Jesus.  ]
+
+(after:8s)[People were expected to confess their sins to a priest, thereby admitting their wrongdoing to God.  ]
+
+(after:10s)[In addition to heaven and hell, the church taught that there was an intermediate state of purgatory which those destined for heaven entered as soon as they died.  
+]
+(after:13s)[The pope (the head of the church) or his representatives confirmed that by going on a particular pilgrimage, by saying certain prayers, by contributing funds to a new church, an individual would gain remission, specified in terms of days or years, from the expected sentence in purgatory” (Rosman, 18) ]
+
+(after:16s)[As you look around you come across a (text-colour:#ffc078)[[bible]], however it is written in Latin… ]</tw-passagedata><tw-passagedata pid="21" name="bible" tags="" position="1175,1275" size="100,100">The Church’s official version, the Vulgate, was a Latin translation from the end of the fourth century. 
+
+(after:4s)[The mass was said in Latin and heard from the back of the church through a rood screen while pious congregants recited their own prayers quietly. Nor could most devout Catholics avail themselves of the consolation of Scripture, for there was no readily available English translation of the Bible in pre-Reformation England. ]
+
+(after:9s)[Most churchmen would have considered it dangerous to make the Bible more widely available, and in 1407 the Church banned the unlicensed translation of Scripture into English.  ]
+
+(after:11s)[Since England has just declared its independence, you must hurry to find out who you are so you can hopefully make it out alive… ]
+
+(after:13s)[You have 3 doors in front of you that lead to different rooms each containing a wardrobe that will reveal your identity. ]
+
+
+(after:16s)[//Choose wisely! //
+
+(text-colour:#ffc078)[[Red Door]]
+
+(text-colour:#ffc078)[[Purple Door]] 
+
+(text-colour:#ffc078)[[Black Door]]]</tw-passagedata><tw-passagedata pid="22" name="Red Door" tags="" position="1300,1450" size="100,100">You are Pope Clement VIII- Head of the Roman Catholic Church  
+
+Congratulations! You made it out// alive//.  
+
+Click here to learn even more about (text-colour:#ffc078)[[who you are!]]</tw-passagedata><tw-passagedata pid="23" name="Purple Door" tags="" position="1000,1450" size="100,100">You are Bishop Fisher  
+
+Congratulations! You made it out alive.  
+
+
+Want to (text-colour:#ffc078)[[learn more]] about who you are? </tw-passagedata><tw-passagedata pid="24" name="Black Door" tags="" position="1150,1450" size="100,100">You are John Allen, priest, 25 February 1538 
+
+You //lost//! You did not make it out alive.  
+
+Want to (text-colour:#ffc078)[[know some information]] about who you are? </tw-passagedata><tw-passagedata pid="25" name="Continue..." tags="" position="350,675" size="100,100">You find yourself in the middle of the forest … 
+
+ 
+
+(after:3s)[(text-colour:#e5dbff)[1)]To your right you see timber-framed houses with vegetable gardens, dunghills, orchards of apple, pear, and cherry trees, henhouses, cart houses and barns (Mortimer,) ]
+
+ 
+
+(after:6s)[(text-colour:#e5dbff)[2)] To your left you see massive areas of hundreds of acres, or even thousand, each divided into smaller units called furlongs. (Mortimer, ]
+ 
+
+(after:10s)[(text-colour:#e5dbff)[3)] Straight ahead you see a medieval parish church that stands at the southern end of the town, a squat wooden spine stands on top of the church tower. (Mortimer, 2) 
+]
+ 
+
+(after:14s)[Which route are you taking? The route you pick will reveal if you will survive or not… 
+
+ 
+
+(text-colour:#ffc078)[[Right]]
+
+(text-colour:#ffc078)[[Left]]
+
+(text-colour:#ffc078)[[Straight]] 
+]</tw-passagedata><tw-passagedata pid="26" name="Right" tags="" position="425,825" size="100,100">You are a Laborer or Farmer! 
+
+(after:2s)[Congratulations! You made it out //alive//.  ]
+
+(after:4s)[An agricultural laborer works in the fields on behalf of the Yeomen, laboring at harvest time, and growing their own vegetables and fruit in order to sustain themselves and their families. (Mortimer, 44) ]
+
+
+(after:9s)[(text-colour:#ffc078)[[Play again!|Continue]]
+
+ Or 
+ 
+(text-colour:#ffc078)[[Choose another direction|Continue...]]]</tw-passagedata><tw-passagedata pid="27" name="Left" tags="" position="275,825" size="100,100">You are a Yeomen! 
+
+(after:2s)[Congratulations! You made it out //alive//.  ]
+
+(after:4s)[Yeomen are the successors of the medieval franklins. A yeoman does farmland and might own the freehold of some of it; but he normally leases a substantial acreage. He employs laborers to help him. (Mortimer, 43) ]
+
+
+(after:10s)[(text-colour:#ffc078)[[Play again!|Continue]]
+
+Or 
+
+(text-colour:#ffc078)[[Choose another direction|Continue...]]]</tw-passagedata><tw-passagedata pid="28" name="Straight" tags="" position="150,825" size="100,100">Poor/Beggar outside of church. 
+
+(after:3s)[Oh no, you lost! You did //no//t make it out alive. ] 
+
+(after:6s)[This is a sad world; you have a diminished chance of surviving to adulthood, let alone gaining an apprenticeship and a place in the community. (Mortimer, 45) 
+]
+
+(after:10s)[
+(text-colour:#ffc078)[[Try again!|Continue]]
+
+Or 
+
+(text-colour:#ffc078)[[Choose another direction|Continue...]]]</tw-passagedata><tw-passagedata pid="29" name="Begin" tags="" position="1250,600" size="100,100">When you open the metal door you find yourself in the middle of The Great Hall, you must gather more information to ensure you make it out of Hampton Court alive! 
+
+You walk out of the Great Hall and find yourself in the Hampton Court Gardens  
+
+There are 3 different [[paths you can take…]]
+
+ </tw-passagedata><tw-passagedata pid="30" name="paths you can take…" tags="" position="1475,800" size="100,100">You must pick only //one// path!
+
+(after:5s)[(text-colour:#e5dbff)[1)] To your right is Westminster Hall will give you clues about the Monarchy and Court  ]
+
+(after:10s)[(text-colour:#e5dbff)[2)] To your left is Chapel Royal will give you clues about the English Church ]
+
+(after:15s)[(text-colour:#e5dbff)[3)] Straight ahead are Large Open Fields and woodlands will give you clues about the Citizen lifestyle  ]
+
+(after:20s)[Which path will you take that you think will lead you to reveal your identity? ]
+
+
+(after:24s)[(text-colour:#ffc078)[[Westminster Hall]] 
+
+(text-colour:#ffc078)[[Chapel Royal]]
+
+(text-colour:#ffc078)[[Large Open Fields and Woodlands]]]]</tw-passagedata><tw-passagedata pid="31" name="Chapel Royal" tags="" position="1675,1025" size="100,100">English Church!
+
+(after:5s)[You are inside the Royal Chapel, which is outstandingly rich and colorful, as you look up and admire the chapel’s vaulted ceiling you hear people coming so you hide behind a curtain that allows you to look into a private pew on the first-floor level which looks down upon the main body of the chapel.  ]
+
+(after:10s)[You see hear people from the Royal Court and the circle around Anne Boleyn promoting Protestant ideas and practices and encouraging to push the King towards Reformation. The goal is to hold the key to every church door in England, in this reign and the next.. 
+]
+ 
+
+(after:15s)[(text-colour:#ffc078)[[Open your book to learn more…]]]</tw-passagedata><tw-passagedata pid="32" name="Large Open Fields and Woodlands" tags="" position="1450,400" size="100,100">You begin walking through a long narrow path, surrounded by beautiful orchard trees and as you absorb your calm surroundings you approach a long calm river that leads you to the end of the path. 
+
+There is stone bridge in front of you that leads you to hundreds of acres of fields, each divided into smaller units called furlongs. As you explore the land you see some areas planted with wheat and hardier corn, others have planted barley. 
+
+There are other fields left fallow to be grazed by pigs or cattle. As you reach the edges of the fields you find enclosures raising thousands of (text-colour:#ffc078)[[sheep.]]
+
+But before you continue, what is your name? 
+
+(input:bind $name)</tw-passagedata><tw-passagedata pid="33" name="Westminster Hall" tags="" position="1750,825" size="100,100">Monarchy, Nobility and Royal Court  
+
+(after:5s)[You find yourself at Westminster Hall and find yourself listening to a meeting held by the Parliament of England discussing two Acts of Supremacy which states “The King is the only supreme head in earth of the Church of England. A further Act in Restraint of Annates diverted the payment of First Fruits and Tenths to the king’s coffers- at substantially higher rates. 
+]
+(after:20s)[Additional legislation regulated the prosecution of heretics, gave the selection of bishops to the Crown, and legalized the questioning of the pope’s authority. Finally, a new Treason Act was passed, declaring it a capital crime to speak against the succession, the king’s title (including his headship of the Church of England), or to call the king or queen a heretic, schismatic, tyrant, infidel, or usurper” (Bucholz &amp; Key, 79)  
+]
+
+(after:30s)[Clearly, someone anticipated trouble! ]
+
+(after:33s)[Which role within the Monarchy or Royal Court do you think you are? 
+
+(text-colour:#ffc078)[[Monarch...]]
+(text-colour:#ffc078)[[Chancellor...]]
+(text-colour:#ffc078)[[Royal Court...]]]</tw-passagedata><tw-passagedata pid="34" name="Monarch..." tags="" position="1775,650" size="100,100">Do you think you are male or female? 
+
+(text-colour:#ffc078)[[Male]]  
+(text-colour:#ffc078)[[Female]]</tw-passagedata><tw-passagedata pid="35" name="Chancellor..." tags="" position="1975,775" size="100,100">You are Cardinal Thomas Wolsey 
+
+Congratulations! You made it out //alive//! 
+
+Click (text-colour:#ffc078)[[here to learn]] more about who you and how your life played out! </tw-passagedata><tw-passagedata pid="36" name="Royal Court..." tags="" position="1850,975" size="100,100"> William Cecil! 
+
+Congratulations! You made it out// alive//! 
+
+Click (text-colour:#ffc078)[[here to lean more about who you are]] and how your life plays out!</tw-passagedata><tw-passagedata pid="37" name="Male" tags="" position="1725,475" size="100,100">You are male, what year would you like to choose? 
+
+(text-colour:#ffc078)[[1509...]]
+(text-colour:#ffc078)[[1547...]]</tw-passagedata><tw-passagedata pid="38" name="Female" tags="" position="1900,500" size="100,100">Oh, female. But in what year? 
+
+(text-colour:#ffc078)[[1533?]]
+
+Or
+
+(text-colour:#ffc078)[[1558?]]</tw-passagedata><tw-passagedata pid="39" name="1533?" tags="" position="2075,400" size="100,100">You are Queen Anne Boleyn! 
+
+You lost! You did not make it out //alive//.  
+
+(text-colour:#ffc078)[[Want to learn exactly how you lost at life?]]
+
+
+
+ </tw-passagedata><tw-passagedata pid="40" name="1558?" tags="" position="1950,325" size="100,100">You are Queen Elizabeth I! 
+
+Congratulations! You made it out //alive//! 
+
+(text-colour:#ffc078)[[Would you like to know exactly how you make it out alive?]]</tw-passagedata><tw-passagedata pid="41" name="here to learn" tags="" position="2125,775" size="100,100">Born in Ipswich, Suffolk, England a royal minister, archbishop of York, and cardinal. He  was a prominent English statesman and cleric in the early 16th century. He rose to become one of the most powerful figures in the court of King Henry VIII and played a pivotal role in the English Reformation. 
+
+(after:6s)[His career in the Church began when became a chaplain to the archbishop of Caterbury. He was then appointed as a royal chaplain by King Henry VII which marked the beginning of his ascent in both the Church and the royal court. ]
+
+(after:13s)[In November 1509, when Henry VIII ascended to the throne, Wolsey’s influence continued to grow. He became Henry VIII almoner and later as the Archbishop of York. In 1515, Pope Leo X made him a cardinal, solidifying his position as one of the highest-ranking officials in the Catholic Church.] 
+
+(after:18s)[(text-colour:#ffc078)[[Click here to leanr even more!]]]
+</tw-passagedata><tw-passagedata pid="42" name="Click here to leanr even more!" tags="" position="2275,775" size="100,100">He also served as Lord Chancellor, making him the chief minister of the realm. Wolsey’s policies centered on strengthening the monarchy’s power, centralizing authority, and pursuing an //aggressive// foreign policy. These policies include implementing reforms in the legal system and overseeing the enclosure commissions, that addresses issues of land use and ownership. 
+
+(after:6s)[In his foreign policy it includes diplomacy and alliances, particularly with the European powers. He played a very important role in negotiating the Treaty of London (Universal Peace) signed on  2 October 1518. ]
+
+(after:12s)[With Henry VIII’s desire to annul his marriage to Catherine of Aragon, as she had not borne him a male heir. Wolsey made many attempts to secure the annulment from the Pope, (text-colour:#f03e3e)[[but was unsuccessful.]]
+]
+</tw-passagedata><tw-passagedata pid="43" name="here to lean more about who you are" tags="" position="1900,1150" size="100,100">William Cecil, 1st Baron Burghley, was a prominent statesman in the court of Queen Elizabeth I of England and one of the most influential figures in the Elizabethan era. Born on September 13, 1520, in Bourne, Lincolnshire, he played a pivotal role in shaping the policies and stability of England during a critical period.  
+
+(after:6s)[He was intricately involved in the religious affairs of England during the Elizabethan era. As Queen Elizabeth I&#39;s chief advisor, Cecil played a central role in shaping the religious policy of the realm. He championed a moderate approach, seeking to strike a balance between Catholics and Protestants to maintain domestic stability. ]
+
+(after:12s)[Cecil was instrumental in the passage of the Act of Uniformity in 1559, which established the Protestant Church of England. He also supported the Act of Supremacy, recognizing the queen as the Supreme Governor of the Church. His diplomatic finesse helped navigate religious tensions and preserve the religious settlement that characterized Elizabethan England. ]
+
+(after:18s)[(text-colour:#ffc078)[[Play again!|Continue]]]
+
+</tw-passagedata><tw-passagedata pid="44" name="Open your book to learn more…" tags="" position="1750,1225" size="100,100">The Protestant Reformation began in Wittenberg, Germany on Oct 31, 1517 when Martin Luther, an educator and monk, released a text known as the &quot;Disputation on the Power of Indulgences,&quot; commonly referred to as the &quot;95 Theses.&quot; This document comprised 95 propositions concerning Christianity, which Luther encouraged individuals to engage in discussions with him about. 
+
+(after:6s)[These ideas stirred controversy as they //openly challenged// the established teachings of the Catholic Church. Luther&#39;s statements challenged the Catholic Church&#39;s role as intermediary between people and God, especially when it came to the indulgence system. This system let people buy a paper that said their sins were forgiven. Luther said this was //wrong//. He believed that you couldn&#39;t buy or work for forgiveness. Instead, he thought that salvation, which means being saved by God, was a gift from God to those who had faith, which means believing strongly in God. ]
+
+(after:13s)[The common thread among these challenges was the belief that individuals should have a more direct relationship with God, relying //less// on the Catholic Church, its pope, and priests for spiritual guidance. //Instead//, Protestants emphasized personal responsibility for faith and turned to the Bible for spiritual guidance. ]
+
+(after:15s)[(text-colour:#ffc078)[[Continue to learn even more...]]]
+ 
+
+ </tw-passagedata><tw-passagedata pid="45" name="1509..." tags="" position="1800,300" size="100,100">The year is 1509, and lucky you, you are King Henry VIII! 
+
+Congratulations you made it out //alive//!  
+
+(after:4s)[Born in 1491, was a famous king of England who ruled for almost 38 years until his death in 1547. He&#39;s well-known for having six marriages, and these marriages had big effects on England&#39;s religion and politics. At the start of his rule, Henry married Catherine of Aragon, who was his brother&#39;s widow. When she couldn&#39;t have a son, Henry wanted to end the marriage, but the Pope said no. ]
+
+(after:10s)[So, Henry decided to separate England from the Pope&#39;s control and started the English Reformation. This led to closing down monasteries, and the money they had went to the king. ]
+
+(after:15s)[Henry&#39;s second marriage was to Anne Boleyn, and they had a daughter named Elizabeth, who later became Queen Elizabeth I. But Anne couldn&#39;t give Henry a son, so she was executed. (text-colour:#f03e3e)[[After Anne, Henry married four more times.]]]</tw-passagedata><tw-passagedata pid="46" name="1547..." tags="" position="1625,300" size="100,100">You are King Edward VI! 
+
+Congratulations you made it out //alive//!  
+
+(text-colour:#ffc078)[[Click here to learn some infomration about who you are!]]</tw-passagedata><tw-passagedata pid="47" name="who you are!" tags="" position="1300,1600" size="100,100">Born Ippolito Aldobrandini in Italy in 1536, became the 231st Pope of the Roman Catholic Church in 1592. He played an important role in various historical events during his time as Pope. 
+
+(after:6s)[He was known for trying to //stop// conflicts and make peace in Europe. He helped end a war between France and Spain through the Treaty of Vervins. He also worked on solving problems between Catholic and Protestant countries. ]
+
+(after:11s)[One of the big things he did was approving a new version of the Latin Vulgate Bible, called the Clementine Vulgate. This Bible became the //official //one for the Catholic Church for a long time. ]
+
+(after:16s)[During his time as Pope, Clement VIII fought //against// different beliefs that went against the Catholic Church. He also supported the Catholic Counter-Reformation, which aimed to strengthen Catholic teachings and practices. ]
+
+(after:21s)[In 1605, Pope Clement VIII passed away. He is remembered for his work in making peace, promoting Catholic beliefs, and approving a new version of the Bible that had a //significant impact// on the Catholic Church. ]
+
+(after:26s)[(text-colour:#ffc078)[[Play again!|Continue]]
+
+Or 
+
+(text-colour:#ffc078)[[Choose another door|bible]]]</tw-passagedata><tw-passagedata pid="48" name="learn more" tags="" position="1000,1575" size="100,100">Also known as Bishop Fisher, lived in England in the early 16th century. He was born in 1469 in Beverley, Yorkshire, and grew up to be a highly educated man. He went to the University of Cambridge and even became a professor there. He was not just a scholar but also a devoted Catholic priest. 
+
+(after:8s)[He worked his way up in the Church and became the Bishop of Rochester in 1504. As a bishop, he strongly defended the teachings of the Catholic Church, especially when the Protestant Reformation was happening in Europe. ]
+
+(after:13s)[One of the most famous things Fisher did was to oppose King Henry VIII&#39;s decision to leave the Catholic Church and create the Church of England. Fisher believed strongly in the Pope&#39;s authority and the unity of the Catholic Church. ]
+
+(after:17s)[He refused to accept Henry VIII as the head of the Church of England and spoke out against the king&#39;s actions. Fisher&#39;s unwavering stand against the king&#39;s religious changes got him into trouble. In 1534, he was put in the Tower of London because he wouldn&#39;t swear an oath accepting Henry VIII&#39;s authority over the Church.]
+
+
+(after:20s)[(text-colour:#ffc078)[[Here is even more information!]]]</tw-passagedata><tw-passagedata pid="49" name="Here is even more information!" tags="" position="1000,1700" size="100,100">Even though he faced prison and the danger of being executed, He //never// gave up his Catholic faith. Sadly, Fisher&#39;s resistance to the king&#39;s religious changes led to his death. 
+
+(after:5s)[In 1535, he was found guilty of treason and sentenced to be beheaded on June 22, 1535. John Fisher&#39;s legacy is all about his strong dedication to his religious beliefs and principles. He&#39;s remembered as a Catholic martyr who gave his life to defend the Catholic Church during a challenging time in English history. His bravery and unwavering faith are still honored today. ]
+ 
+(after:13s)[(text-colour:#ffc078)[[Play Again!|Continue]]
+ 
+ Or 
+ 
+(text-colour:#ffc078)[[Choose another door|bible]]]</tw-passagedata><tw-passagedata pid="50" name="know some information" tags="" position="1150,1575" size="100,100">He was born in 1532 and faced challenges due to the religious changes happening in the country. At that time, King Henry VIII separated from the Catholic Church to create the Church of England. 
+
+(after:5s)[This caused religious turmoil, with Catholics and Protestants disagreeing about their faith. John Allen was a devoted Catholic who believed in the Pope&#39;s authority and the traditional Catholic Church. He didn&#39;t agree with the changes made by the English monarchy. ]
+
+(after:11s)[To escape the religious persecution of Catholics in England, John Allen went to a Catholic seminary in Douai, France. This seminary trained English priests, and John became an important figure in the English Catholic community abroad. ]
+
+(after:17s)[He  was dedicated to his faith and played a crucial role in the English Catholic mission. He supported and trained English Catholic priests who could secretly help Catholics in England. ]
+
+(after:20s)[(text-colour:#ffc078)[[Here is even more information to learn!]]]</tw-passagedata><tw-passagedata pid="51" name="Here is even more information to learn!" tags="" position="1150,1700" size="100,100">As the leader of the English College in Douai, John Allen provided a safe place and education to young Englishmen who wanted to become Catholic priests. 
+
+(after:5s)[He worked hard to keep the Catholic faith alive in England when Catholics were heavily persecuted.John Allen&#39;s commitment to his faith and his efforts to protect Catholicism in England left a strong impact. 
+]
+(after:10s)[He is remembered as a brave figure who stood firm in his beliefs during a challenging time in English history. Despite the difficulties and dangers he faced, John Allen&#39;s legacy shows his unwavering faith and dedication to his religious principles during a time of big changes in England. ]
+
+(after:15s)[(text-colour:#ffc078)[[Play again!|Continue]]
+
+Or 
+
+(text-colour:#ffc078)[[Choose another door|bible]]]</tw-passagedata><tw-passagedata pid="52" name="Want to learn exactly how you lost at life?" tags="" position="2225,400" size="100,100">Born around 1501 in probably at Blickling Hall in Norfolk. Anne Boleyn was the daughter of Sir Thomas Boleyn and Lady Elizabeth Howard. She spent some of her youth in France and returned to England in 1522. 
+
+(after:6s)[She became a maid of honor to Queen Catherine of Aragon, who was King Henry VIII&#39;s wife at that time. She was a significant figure in English history due to her life and marriage to King Henry VIII. She was raised in England and educated in the Netherlands and France. Her return to England caught the attention of King Henry, who wanted to annul his marriage to Catherine of Aragon. ]
+
+(after:13s)[Anne&#39;s influence on Henry and her support for the English Reformation played a role in England&#39;s separation from the Catholic Church. In 1533, Henry married Anne, and she became Queen, giving birth to Elizabeth. However, Anne&#39;s inability to provide a male heir led to her downfall. (text-colour:#f03e3e)[[Henry accused her of adultery and treason.]]]
+
+</tw-passagedata><tw-passagedata pid="53" name="Would you like to know exactly how you make it out alive?" tags="" position="2100,275" size="100,100">The &quot;Virgin Queen,&quot; was born on September 7, 1533, in Greenwich, England. She was the daughter of King Henry VIII and Anne Boleyn. Elizabeth&#39;s early life was marked by political turmoil and danger, as her mother was executed when Elizabeth was just three years old. Elizabeth&#39;s half-siblings, Mary I and Edward VI, took turns ruling England after their father&#39;s death. Elizabeth&#39;s religious beliefs were a source of //controversy //during this time, as she was Protestant in a Catholic-dominated era. 
+
+(after:10s)[In 1558, Elizabeth became queen after the death of her sister Mary. Her reign, known as the Elizabethan Era, was characterized by// stability and prosperity//. She was a skilled diplomat and successfully navigated the challenges posed by foreign powers, particularly Spain. One of Elizabeth&#39;s most significant achievements was the defeat of the Spanish Armada in 1588, a naval battle that protected England from invasion by Spain. Her support for exploration and trade, exemplified by figures like Sir Walter Raleigh and Sir Francis Drake, contributed to England&#39;s growing influence as a global power. ]
+
+(after:17s)[(text-colour:#ffc078)[[But wait, there is more!]]]</tw-passagedata><tw-passagedata pid="54" name="But wait, there is more!" tags="" position="2275,275" size="100,100">Elizabeth also encouraged the flourishing of the arts and literature during her reign, with renowned playwright William Shakespeare creating some of his most famous works during this time. Despite her long and prosperous rule, Elizabeth faced internal threats, including plots to overthrow her and concerns about her marriage and heir. She remained unmarried and referred to herself as the &quot;Virgin Queen,&quot; choosing not to share her power with a husband. 
+
+(after:9s)[Queen Elizabeth I passed away on March 24, 1603, and her death marked the end of the Tudor dynasty. She left behind a legacy of stability, cultural achievement, and national pride. Her reign is often remembered as a golden age in English history, and she remains one of England&#39;s most iconic monarchs. 
+]
+(after:12s)[(text-colour:#ffc078)[[Play again!|Continue]]
+
+Or 
+
+(text-colour:#ffc078)[[Choose another year|Female]]]</tw-passagedata><tw-passagedata pid="55" name="Continue to learn even more..." tags="" position="1800,1375" size="100,100">In England, King Henry VIII initiated a form of Protestant reform in 1534 when the Pope denied his request for a marriage annulment. Rejecting the Pope&#39;s authority, Henry created the Church of England, blending Catholic and Protestant elements. Subsequent monarchs and rulers oscillated between Catholicism and Protestantism, leading to religious turmoil. 
+
+(after:6s)[Some English citizens, called separatists, believed the Church of England was beyond reform and left England to establish the English Separatist Church. After an unsuccessful attempt in the Netherlands, some returned to England but later sailed on the Mayflower to Plymouth, Massachusetts, becoming known as Pilgrims. ]
+
+(after:12s)[Nonseparatists, or Puritans, aimed to reform the Church of England from within by eliminating Catholic remnants. In 1630, the first Puritans arrived in the Massachusetts Bay Colony, seeking a more faithful religious practice. 
+]
+(after:16s)[(text-colour:#ffc078)[[Continue if you dare...]]]</tw-passagedata><tw-passagedata pid="56" name="Continue if you dare..." tags="" position="1800,1525" size="100,100">As you have learned, there are many changes happening in England, and you must know your identity before getting caught… 
+
+You have (text-colour:#ffc078)[[3 doors]] in front of you at the Royal Chapel that lead to different rooms each containing a wardrobe that will reveal your identity. </tw-passagedata><tw-passagedata pid="57" name="3 doors" tags="" position="1800,1700" size="100,100">“Monasteries, chantries and religious guilds were dissolved, and much of the wealth of the church was confiscated by the government. This included not only land owned by religious orders, but also objects from parish churches: bells, communion-ware made from precious metals, and richly decorated vestments worn by priests when celebrating Mass...
+
+(after:8s)[The number of saints’ days was drastically reduced; pilgrimages to shrines were forbidden and the veneration of relics condemned; statues and wall-paintings were defaced and roods were pulled down. Prayers and Masses for the dead, along with the use of palms and ashes, were banned, and Latin services were replaced by a vernacular liturgy. These changes constituted the English Reformation, part of a wider European movement” (Rosman, 18)  ]
+
+ (after:16s)[Which door do you choose? 
+]
+
+(after:18s)[(text-colour:#ffc078)[[Red Door?]]
+(text-colour:#ffc078)[[Purple Door?]]
+(text-colour:#ffc078)[[Black Door?]]
+]
+ </tw-passagedata><tw-passagedata pid="58" name="Red Door?" tags="" position="1800,1825" size="100,100">You are Thomas Cromwell! Deputy as Head of the Church of England 
+
+Congratulations! You made it out// alive//!
+
+Click here to learn more about who (text-colour:#ffc078)[[you are!]]</tw-passagedata><tw-passagedata pid="59" name="Purple Door?" tags="" position="1925,1825" size="100,100">You are Thomas Cranmer! 
+
+Congratulations! You made it out //alive//! 
+
+Click here to learn even more about (text-colour:#ffc078)[[you are now!]]</tw-passagedata><tw-passagedata pid="60" name="Black Door?" tags="" position="1675,1825" size="100,100">You are Bishop Miles Coverdale!  
+
+Church reformer and bishop. He translated the first printed translation of the whole Bible (Great Bible)  in English published in 1535. The book was authorized by Henry VIII to be read aloud at Church of England services 
+
+(text-colour:#ffc078)[[Try Again!|3 doors]]</tw-passagedata><tw-passagedata pid="61" name="you are!" tags="" position="1800,1950" size="100,100">His birth is uncertain but believed that he was born around 1485, held a focal role in the court of King Henry VIII during England&#39;s turbulent era of the English Reformation. His life was marked by political intelligence and leading administrative capabilities, making him a central figure in reshaping England&#39;s religious landscape. 
+
+(after:8s)[He diversified his career as a merchant, lawyer, and clerk, gaining valuable administrative and legal expertise. His political involvement began when he entered the service of Cardinal Thomas Wolsey, a significant advisor to King Henry VIII. He swiftly gained Wolsey&#39;s trust, becoming an indispensable aide in the cardinal&#39;s quest to secure the annulment of the king&#39;s marriage to Catherine of Aragon. ]
+
+(after:15s)[Following Wolsey&#39;s fall from favor, Cromwell continued to ascend into Henry&#39;s court. He played a pivotal role in the English Reformation by facilitating the king&#39;s break from the authority of the Pope in Rome. Cromwell orchestrated the legal and political framework that enabled Henry VIII to declare himself the Supreme Head of the Church of England.
+]
+(after:18s)[(text-colour:#ffc078)[[There is even more to learn!]]]</tw-passagedata><tw-passagedata pid="62" name="There is even more to learn!" tags="" position="1800,2075" size="100,100">He orchestrated the dissolution of monasteries, a significant endeavor that involved the //confiscation// and //dissolution// of religious institutions. This transformative action had a profound impact on England&#39;s religious and economic landscape. He also played a crucial role in the downfall of Anne Boleyn, Henry&#39;s second wife. 
+
+(after:6s)[He orchestrated her arrest and subsequent execution on charges of adultery and treason, thereby //paving //the way for Henry&#39;s marriage to Jane Seymour. His contributions culminated in the enactment of the Act of Supremacy in 1534. This legislation officially recognized Henry VIII as the Supreme Head of the Church of England, effectively severing ties with the authority of the Pope. ]
+
+(after:12s)[Cromwell&#39;s rapid ascent was followed by an equally swift fall from favor. In 1540, he faced arrest and charges of //heresy// and //treason//, primarily related to his involvement in the king&#39;s marriage to Anne of Cleves. He met his end through beheading on July 28, 1540. ]
+
+(after:14s)[(text-colour:#ffc078)[[Well done, Play again!|Continue]]
+
+Or 
+
+(text-colour:#ffc078)[[Try another door!|3 doors]]]</tw-passagedata><tw-passagedata pid="63" name="you are now!" tags="" position="1925,1950" size="100,100">Thomas Cranmer- Archbishop of Canterbury, was born, according to his first, anonymous, biographer, on 2 July 1489, at Aslockton, Nottinghamshire. Cranmer received his early education at the village school in Aslockton and later attended Jesus College, Cambridge. His academic pursuits led him to embrace the ideas of the Renaissance and humanism, influencing his religious beliefs and theological views. 
+
+(after:8s)[His religious convictions underwent significant change when he became exposed to Protestant ideas during his time in Europe. He embraced the principles of the Reformation, including the belief in justification by faith alone and the rejection of papal authority. These convictions would later shape his role in the English Reformation. 
+]
+(after:16s)[In 1533, Cranmer was appointed as the Archbishop of Canterbury by King Henry VIII. His most notable contribution during this period was his support for the annulment of Henry&#39;s marriage to Catherine of Aragon, which led to the English Church&#39;s break from the authority of the Pope. Cranmer played a pivotal role in facilitating the king&#39;s divorce and subsequent marriage to Anne Boleyn. 
+]
+(after:18s)[(text-colour:#ffc078)[[There is still far more to learn!]]]</tw-passagedata><tw-passagedata pid="64" name="There is still far more to learn!" tags="" position="1925,2075" size="100,100">Cranmer&#39;s enduring legacy lies in his work on the Book of Common Prayer, first published in 1549. This liturgical text standardized worship in the Church of England, providing a common religious language for the English people. It underwent revisions, with the final version in 1662 remaining the standard for Anglican worship. 
+
+Cranmer&#39;s tenure as Archbishop of Canterbury witnessed significant religious and political upheaval. During the reign of King Edward VI, he pushed for more Protestant reforms, including the introduction of the Protestant Book of Common Prayer in 1552. However, upon the ascension of Queen Mary I in 1553, who aimed to restore Roman Catholicism, Cranmer faced persecution for his (text-colour:#ffc078)[[Protestant beliefs.]]
+</tw-passagedata><tw-passagedata pid="65" name="Click here to learn some infomration about who you are!" tags="" position="1625,150" size="100,100">Born in 1537 was born on October 12, 1537, at Hampton Court Palace in England. He was the long-awaited male heir of King Henry VIII and his third wife, Jane Seymour. Edward&#39;s birth was a momentous occasion, as his father had gone through two marriages and the English Reformation to secure a male successor to the throne. Tragically, his mother, Jane Seymour, died just days after his birth due to complications. 
+
+(after:7s)[During Edward VI&#39;s reign, England experienced a strong wave of religious reform known as the Protestant Reformation. His advisors, led by the Duke of Somerset, implemented Protestant reforms within the Church of England. This included the introduction of the Book of Common Prayer in 1549, which replaced traditional Catholic practices with Protestant ones. Edward himself was a devout Protestant and actively supported the reformation of the Church. His short reign was marked by a strong shift toward Protestantism, including the dissolution of monasteries and the removal of many Catholic practices. ]
+
+
+(after:12s)[(text-colour:#ffc078)[[Would like to learn even more?]]]</tw-passagedata><tw-passagedata pid="66" name="Would like to learn even more?" tags="" position="1625,25" size="100,100">Even though he was young, Edward was very smart and believed strongly in Protestantism. However, his time as king had some problems, like money troubles and people not being happy with the new religious rules. Some parts of the country even rebelled against these changes. Moreover, his health began to deteriorate in his mid-teens. In 1553, at the age of 15, Edward succumbed to tuberculosis, leaving no direct heirs. 
+
+(after:8s)[Edward&#39;s untimely death led to a succession crisis, as he had never married and had no children. His cousin, Lady Jane Grey, was briefly proclaimed queen but faced opposition. Ultimately, Mary I, Edward&#39;s half-sister, ascended to the throne and sought to restore Catholicism in England. His reign made the Church of England more Protestant, and these changes continued in the time of Queen Elizabeth I and King James I. Even though he lived a short life, Edward&#39;s influence on England&#39;s religion during the time of the Protestant Reformation is remembered in history. ]
+
+(after:16s)[(text-colour:#ffc078)[[Play again!|Continue]]
+
+Or 
+
+(text-colour:#ffc078)[[Choose another year|Male]]
+
+ ]</tw-passagedata><tw-passagedata pid="67" name="sheep." tags="" position="1300,400" size="100,100">“The reason why so much of England is used for grazing is the value of sheep. Obviously, sheep are a food source, but an even more important reason for farming them is the value of wool. Many rural communities depend heavily on the wool trade for their income. Huge amounts of money are raised for the government through the imposition of customs duties on wool, woolfells, and fleeces exported to Europe” (Mortimer,11)  
+
+The fields, commons, rivers and animals are the most visible features you, $name, have encountered so far, however you notice the area of woodlands rapidly shrinking and wonder why that is? You come across a man chopping down a tree and ask him to which he (text-colour:#ffc078)[[responds…]]
+
+ </tw-passagedata><tw-passagedata pid="68" name="responds…" tags="" position="1175,400" size="100,100">“These oaks take more than a century to grow, however landlords do not regret the permanent loss of their woods because the cleared land can be used for other agricultural purposes. The widespread felling thus doubly drastic being permanent, it leads to higher prices of wood, encouraging landlords to fell yet more timber. Add the increase in the population and the extra wood needed for all the extra people, not to mention the materials needed for building of their houses, and you can see how there’s not very much wood left” (Mortimer, 12)  
+
+(text-colour:#ffc078)[[Continue for more...]]</tw-passagedata><tw-passagedata pid="69" name="Continue for more..." tags="" position="1075,275" size="100,100">You, $name, come across 3 different keys laid out in front of you that will open the door of 3 different houses that you will encounter at the end of the trial. Once you enter your house it will reveal your identity and your status within society.  
+
+
+(text-colour:#ffc078)[[Silver Key]]
+
+Or
+
+(text-colour:#ffc078)[[Bronze Key]]
+
+Or
+
+(text-colour:#ffc078)[[Gold Key]]
+
+ </tw-passagedata><tw-passagedata pid="70" name="Silver Key" tags="" position="1225,125" size="100,100">Congratulations! You, $name, made it out //alive//! 
+
+Your house is 3 stories high timber framed, with brick between the timbers. Merchants tend to have significant political roles, becoming an alderman (the chief representative of one of the twenty-six London wards), lord mayor, or the master of a livery company. They have considerable influence, several wealthy London merchants are knighted. (Mortimer, 39) 
+
+(picture) 
+
+(text-colour:#ffc078)[[Play again!|Continue]]
+
+Or 
+
+(text-colour:#ffc078)[[Choose another key|Continue for more...]]</tw-passagedata><tw-passagedata pid="71" name="Bronze Key" tags="" position="1300,250" size="100,100">Congratulations! You, $name, made it out //alive//! 
+
+Your house is timber framed. Yeomen are in between the very rich (the gentry in their manor houses and stately homes with large income) and the itinerant beggars and local paupers. A yeoman does farmland, and might own the freehold of some of it, but he normally leases a substantial acreage. He employs laborers to help him. (Mortimer, 44)  
+
+(picture) 
+
+(text-colour:#ffc078)[[Play again|Continue]]
+
+Or 
+
+(text-colour:#ffc078)[[Choose another key|Continue for more...]]</tw-passagedata><tw-passagedata pid="72" name="Gold Key" tags="" position="1075,100" size="100,100">Congratulations! You, $name, made it out //alive//! 
+
+Your house is a cottage and work in the fields on behalf of a yeoman, you have very little or no land. You might have the rights to graze a couple of cattle and a horse or two on the common, and to collect firewood from the manorial woods. (Mortimer, 44)  
+
+(picture) 
+
+
+(text-colour:#ffc078)[[Play again!|Continue]]
+
+Or 
+
+(text-colour:#ffc078)[[Choose another key|Continue for more...]]</tw-passagedata><tw-passagedata pid="73" name="Catholic..." tags="" position="350,1275" size="100,100">He firmly believed in the teachings and authority of the Catholic Church. However, in 1532, he resigned from this esteemed position due to his unwavering opposition to Henry&#39;s quest to annul his marriage to Catherine of Aragon. He could not endorse the king&#39;s actions, which included asserting his own authority over the Church of England. 
+
+(after:7s)[More&#39;s refusal to take the oath of supremacy recognizing Henry as the head of the Church of England ultimately led to his downfall. More&#39;s steadfast refusal to acknowledge Henry as the head of the Church of England resulted in his arrest in 1534, followed by a period of imprisonment in the Tower of London. ]
+
+(after:13s)[More&#39;s trial for treason in 1535 and subsequent execution by beheading marked the climax of his Catholic tragedy. He refused to compromise his religious principles and remained loyal to the Pope and the Catholic Church. His execution was a consequence of his unwavering commitment to his faith. ]
+
+ 
+(after:17s)[(text-colour:#ffc078)[[Try again!|Continue]]
+
+Or 
+
+(text-colour:#ffc078)[[Choose another option|screams]]]</tw-passagedata><tw-passagedata pid="74" name="Learn more about your fate!" tags="" position="525,1450" size="100,100">Catherine //refused// to accept the annulment and continued to consider herself Henry&#39;s rightful wife. She held strong religious beliefs. She was a devout Catholic throughout her life. Catherine&#39;s faith was deeply important to her, and she was known for her piety and devotion to the Catholic Church. 
+
+(after:6s)[She firmly believed in the sanctity of marriage and the indissolubility of the marital bond. Catherine&#39;s unwavering commitment to her religious principles and her refusal to compromise on her beliefs, even in the face of political pressure, made her a symbol of steadfastness and moral integrity in her time. ]
+
+(after:13s)[She lived the rest of her life in isolation and //died in 1536//. Catherine&#39;s strong stance on her marriage and her Catholic faith earned her admiration and sympathy, and she is remembered as a resilient and principled queen. ]
+
+(after:15s)[(text-colour:#ffc078)[[Play again!|Continue]]
+
+Or 
+
+(text-colour:#ffc078)[[Choose another year|Monarch]]]</tw-passagedata><tw-passagedata pid="75" name="Protestant beliefs." tags="" position="1925,2200" size="100,100">In 1556, Thomas Cranmer was arrested, tried for heresy, and found //guilty//. He was forced to recant his Protestant beliefs, but when he realized that he would still face execution, he famously reaffirmed his Protestant faith and recanted his previous recantation. On March 21, 1556, he was burned at the stake, enduring martyrdom for his religious convictions. 
+
+Thomas Cranmer&#39;s life and work left an //indelible mark// on the English Church and the development of Anglicanism. His theological contributions, particularly the Book of Common Prayer, continue to shape Anglican worship to this day, and his commitment to his beliefs, even in the face of persecution, solidifies his status as a martyr of the English Reformation. 
+
+(text-colour:#ffc078)[[Well done! Play again!|Continue]]
+
+Or 
+
+(text-colour:#ffc078)[[Choose another door!|3 doors]]</tw-passagedata><tw-passagedata pid="76" name="but was unsuccessful." tags="" position="2275,900" size="100,100">This dispute, known as the “King’s Great Matter” of 1527 ultimately led to England’s break with the Catholic Church. As Henry VIII&#39;s frustration with the lack of progress in the annulment process grew, so did his discontent with Wolsey. 
+
+(after:5s)[In 1529, Wolsey was //dismissed from his position //as Lord Chancellor and faced accusations of treason. However, he was spared further punishment, and his vast wealth was //confiscated//. He retired from public life and lived under house arrest. 
+]
+(after:11s)[Cardinal Thomas Wolsey died on November 29, 1530, in Leicester, while en route to London to face trial for treason. His death marked the end of a remarkable career that had seen him rise from humble beginnings to become one of the most influential figures in England during a period of significant political and religious change]. 
+
+(after:16s)[(text-colour:#ffc078)[[Play again...|Continue]]]</tw-passagedata><tw-passagedata pid="77" name="Henry accused her of adultery and treason." tags="" position="2400,375" size="100,100">In 1536, Anne was arrested, tried, and found guilty. She was executed by beheading at the Tower of London. Her death marked a significant moment in English history, as it allowed Henry to have more marriages and continued religious changes in England. 
+
+(after:8s)[Anne Boleyn&#39;s life and death inspired many books, films, and art. She is remembered for her impact on the English Reformation and the Church of England&#39;s formation. Her daughter, Elizabeth I, became a great monarch who left a lasting mark on England&#39;s history. 
+
+(text-colour:#ffc078)[[Try again!|Continue]] 
+
+Or 
+
+(text-colour:#ffc078)[[Choose another year|Female]]]</tw-passagedata><tw-passagedata pid="78" name="After Anne, Henry married four more times." tags="" position="1850,150" size="100,100">He wanted a son as his heir. He had one son, Edward VI, with Jane Seymour. His marriage to Anne of Cleves was canceled, and his marriages to Catherine Howard and Catherine Parr were less troubled.  
+
+Besides his marriages, Henry VIII did other important things. He had a strong personality and wanted more// power for the king//. During his rule, England became a Protestant nation because of the English Reformation. Henry&#39;s decisions had a long-lasting impact on England&#39;s religion and politics. He passed away in 1547, leaving behind a legacy of changing England&#39;s course through his marriages and religious reforms. 
+
+(text-colour:#ffc078)[[Play again!|Continue]]
+
+Or 
+
+(text-colour:#ffc078)[[Choose another year|Male]]
+
+</tw-passagedata><tw-passagedata pid="79" name="reverse the Protestant changes." tags="" position="725,1425" size="100,100">During her rule, Mary was harsh in trying to restore Catholicism, leading to her nickname //&quot;Bloody Mary&quot;//. She persecuted and executed many Protestants. 
+
+(after:4s)[Her marriage to King Philip II of Spain aimed to support Catholicism but wasn&#39;t liked in England. She faced political and military challenges, including conflicts with France. She passed away on November 17, 1558, and was succeeded by her half-sister, Elizabeth I, who brought back Protestantism. 
+]
+(after:9s)[Mary&#39;s legacy is complex. She wanted to restore Catholicism, but her harsh actions created controversy. Her reign influenced English religious history and the ongoing religious tensions. ]
+
+(after:13s)[(text-colour:#ffc078)[[Play again!|Continue]]
+
+Or 
+
+(text-colour:#ffc078)[[Choose another year|Monarch]]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
